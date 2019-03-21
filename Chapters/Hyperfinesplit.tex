@@ -1,0 +1,371 @@
+In this chapter we will be going over the splitting of energy states that occur when considering fine structure and hyperfine structure. This is very important to the overall work as having a strong understanding of why this energy splitting occurs is crucial to dealing with transitions between these levels. We will briefly be going over the gross structure of the atom and the related quantum numbers. We will also be reviewing all of the quantum numbers that are involved in fine structure splitting as well as hyperfine structure splitting. We will show a derivation of how the spin-orbit coupling leads to fine structure splitting as well as how the spin-spin coupling of the electron with the spin of the nucleus leads to hyperfine splitting.
+
+
+
+
+
+
+
+
+
+\section{Introduction}
+In the most basic terms possible the hyperfine splitting is a splitting of the energy levels for a certain atomic state caused by the interactions between the atomic electrons and the nucleus. States of an atom are represented by quantum numbers the most basic of which is $n$ which is known as the ‘principal quantum number’. It determines the overall energy level of the state or rather how excited the electron is. The second quantum number is $l$ or ‘Azimuthal' quantum number, this number specifies the orbital angular momentum of the electron in units of $\hbar$ and is responsible for the splitting of the quantum states of certain energy levels such as $n=$ into 2s and 2p. The Azimuthal quantum number $l$ is bound by $n$ such that $0 \leq l \leq n-1$. Further separation of states occurs due to the magnetic quantum number $m$ or $m_l$ which represents the projection of the angular momentum onto the z-axis. The absolute value of this quantum number is bound by the orbital angular momentum of the state $l$ such that $-l \leq m_l \leq l $. The final quantum number used to describe an electronic state is $s$, this number represents the spin angular momentum of the electron and is always \(\frac{1}{2}\). These quantum numbers are the ones most commonly used to describe a state of an atom and are perfectly acceptable for most general purposes; however, when high precision is involved there are more quantum numbers and interactions that are required.
+
+\section{Gross Structure}
+The gross structure of hydrogen is one of the most basic and fundamental atomic systems in quantum mechanics. Unlike most other many-electron systems, it is one that we can calculate analytically instead of making increasingly accurate approximations. Although this is rather deceiving as an introduction to quantum mechanics it serves as the bedrock against which all quantum mechanical systems can be compared. In it's most simplistic form it is the structure of the atom that is created by the interaction between the electron and its nucleus whose potential energy is given by(in SI units) \cite{woodgate}
+
+\begin{equation}
+    V(r)=\frac{-Ze^2}{4\pi \epsilon_0 r}
+\end{equation}
+where $Z$ is the nuclear charge, $r$ is the electron distance from the nucleus and $e$ is the electron charge. The resulting energy levels are obtained by solving the Schr\"{o}dinger equation 
+\begin{equation}
+    \mathscr{H}_0 \Psi= E\Psi 
+\end{equation}
+with
+\begin{equation}
+	     \mathscr{H}_0= -\frac{\hbar^2}{2m}\nabla^2-\frac{Ze^2}{4\pi\epsilon_0 r}
+	     \end{equation}
+therefore
+\begin{equation}
+    \left[ \frac{-\hbar^2}{2m}\nabla^2 + V(r) \right] \Psi = E \Psi
+\end{equation}
+where the energies are given by
+\begin{equation}
+    E_n = -\frac{e^2 Z^2}{2a_0 n^2}
+\end{equation}
+and $a_0 = \hbar^2/mc^2$ is the Bhor radius. 
+\section{Fine Structure Splitting}
+The coupling between an electron spin and it's orbit gives rise to fine structure splitting and the total angular momentum quantum number represented by $J$ where
+	\begin{equation}
+	     \textbf{J}= \textbf{L}+ \textbf{S}.
+	\end{equation}
+	 is the total angular momentum including spin. These different values for the total angular momenta give rise to different energy levels within a state of a given principal quantum number $n$. An example of this is the splitting of the 2p state. With the given values of \(l=1\) and \(s=\frac{1}{2}\), this spin-orbit coupling gives rise to the fine structure states of \(J=\frac{1}{2}\) and \(J=\frac{3}{2}\). To calculate this energy splitting we treat the spin-orbit coupling as a small perturbation to the Hamiltonian, where the total Hamiltonian is \cite{woodgate2}
+	 \begin{equation}
+	     \mathscr{H}= \mathscr{H}_0 +\xi\textbf{l}\cdot\textbf{s}
+	 \end{equation}
+	 with
+	 \begin{equation}
+	     \xi=\frac{\hbar}{2m_0^2 c^2} \Big \langle{\frac{1}{r}\frac{dV}{dr}}\Big \rangle
+	 \end{equation}
+	 The transformation from the \(m_l, m_s\) representation to the $j$, $m_j$ representation in Dirac notation is defined by
+	     \begin{align}
+	     \ket{nljm_j}=&\sum_{m_lm_s}\ket{nlm_lm_s}
+	     \braket{lsm_lm_s}{lsjm_j}
+	     \end{align}
+    where $\braket{lsm_lm_s}{lsjm_j}$ is a Clebsch-Gordan coefficient \cite{edmonds2}. The expectation value for the first order correction to the energy is \cite{woodgate2}
+    \begin{equation}
+        \Delta E_1=\bra{nljm_j}\xi\textbf{l}\cdot\textbf{s}\ket{nljm_j}
+    \end{equation}
+    We use the fact that $\ket{nljm_j}$ is an eigenfunction of \(\textbf{j}^2\), \(\textbf{l}^2\), \(\textbf{s}^2\), and \(j_z\) to avoid calculating the Clebsch-Gordan coefficients. Using the fact that
+    \begin{align}
+        \textbf{j}^2=(\textbf{l}+\textbf{s})\cdot(\textbf{l}+\textbf{s})
+        =\textbf{l}^2+\textbf{s}^2+2\textbf{l}\cdot\textbf{s}
+    \end{align}
+    we can write
+    \begin{align}
+        \textbf{l}\cdot\textbf{s}=\frac{1}{2}(\textbf{j}^2-\textbf{l}^2-\textbf{s}^2)
+    \end{align}
+	 Which gives the result
+	 \begin{align*}
+	     \Delta E_1=\frac{\xi}{2}\bra{nljm_j}
+	         \textbf{j}^2-\textbf{l}^2-\textbf{s}^2
+	         \ket{nljm_j}\\
+	         =\frac{\xi}{2}[j(j+1)-l(l+1)-s(s+1)]
+	 \end{align*}
+	 This leads to an energy splitting between the \(2p_{\frac{1}{2}}\) state and the \(2p_{\frac{3}{2}}\) in atomic units by use of the expression
+	 \begin{equation}
+    \omega_{p\frac{3}{2}-p\frac{1}{2}}=\frac{\alpha^2Z^4}{4n^3}=1.665\cross10^{-6}
+\end{equation}
+in atomic units with $Z=1$. This is several orders of magnitude smaller than the transition energy between the ground state and first excited state, which is in atomic units 
+\begin{equation}
+    \frac{1}{2}-\frac{1}{8}=\frac{3}{8}
+\end{equation}.
+    \section{Hyperfine Structure Splitting}
+	In addition to the fine structure spitting there is a further level of splitting known as hyperfine splitting. This energy level splitting is again caused by the coupling of two different angular momenta. However, in this case it is the coupling of the total angular momentum of the electron $J$ and the spin angular momentum of the nucleus $I$. In the s-states of hydrogen this splitting is particularly prominent. This is due to the fact the wave equation of the electron in the s-state is non-zero at radius zero. This is the reason for the hyperfine energy splitting to be as large as it is in the s-states. The quantum number that we use to denote this hyperfine-energy levels is $F$ where
+	\begin{equation}
+	    \textbf{F}=\textbf{J}+\textbf{I},
+	\end{equation}
+%	The wavelength of the ground state hydrogen hyperfine split is one of the most famous and accurately calculated values to date. It is such a strongly measured number that is has been included on the memorial plaque of the voyager 1 and 2 as a unit of measurement should intelligent life ever locate them. The main reason for its incredible use has to deal with astrophysics. Our main way of detecting distance planets and galaxies is by seeing the light that they give off, however our atmosphere prevents a majority of it from getting through. The incredibly low frequency of the hyperfine split has a low enough wave length that it is capable of penetrating our atmosphere and thus allowing us to detect distant hydrogen. When we detect this emitted radiation we are able to determine the direction of these large bodies, and because we can measure the hyperfine split so accurately we can therefore easily calculate the Doppler shifts of it's emitted light. Due to all this we were able to use the hyperfine split to model our galaxy and determine that is was a spiral\cite{astro}.
+We proceed in much the same way as fine structure splitting. We treat the interaction of the point nuclear magnetic moment \(\mathbf{\mu}_I\) with the magnetic field \(\mathbf{B}_{el}\) that is generated by the electrons at the nucleus, as a small perturbation to the Hamiltonian $\mathscr{H}$, which takes the form \cite{woodgate3}
+\begin{equation}
+    \mathscr{H}=\mathscr{H}_0+\mathscr{H}_1
+\end{equation}
+where
+\begin{equation}
+    \mathscr{H}_1 =-\boldsymbol{\mu}_I\cdot\mathbf{B}_{el}
+\end{equation}
+and it is assumed that the zeroth order Hamiltonian $\mathscr{H}_0$ contains the terms that allow us to evaluate the separate energy levels corresponding to each $J$. We make the assumption that we are only dealing with an isolated manifold of the hyperfine states labeled by $J$, and that hyperfine splitting is small compared to fine structure splitting. We will refer to this approximation as the $IJ$ coupling approximation, similar to $LS$ coupling approximation in fine structure. Using this we can rewrite the point nuclear magnetic moment \(\mathbf{\mu}_I\) as \cite{woodgate3}
+%Figure out how to bold a mathematical symbol
+\begin{equation}
+    \boldsymbol{\mu}_I= \frac{\mu_I}{I}\mathbf{I}
+\end{equation}
+with \(\mu_I\) being the value of the nuclear magnetic moment. We can also note that \(\mathbf{B}_{el} \propto \mathbf{J}\) with the assumption that the operator operates in the space of electron coordinates only. This allows us to rewrite our Hamiltonian as
+\begin{equation}
+    \mathscr{H}_1=A \mathbf{I} \cdot \mathbf{J}
+\end{equation}
+with $A$ being determined through measurements of experimental transition frequencies.
+
+Consider first the magnetic field for a single-electron atom with \( l\neq 0\). The semi-classical magnetic field at the nucleus consists of the orbital motion of the electron of charge $-e$ with coordinate \(\mathbf{r}\) relative to the nucleus and the spin magnetic moment of the electron at a distance $r$ from the nucleus. We can then rewrite the magnetic field operator as \cite{woodgate3}
+\begin{equation}
+    \mathbf{B}_{el}=\frac{\mu_0}{4\pi} \frac{(-e\mathbf{v})\cross (-\mathbf{r)}}{r^3} - \frac{\mu_0}{4\pi}\frac{1}{r^3}
+    \bigg[\boldsymbol{\mu}_s -\frac{3(\boldsymbol{\mu}_s \cdot \mathbf{r})\mathbf{r}}{r^2}
+    \bigg]
+\end{equation}
+Then using \(\boldsymbol{\mu}_s = -2\mu_B\mathbf{s}\) and \(-e\mathbf{r}\cross \mathbf{v} = -2\mu_b \mathbf{l}\) with $\mu_B$ being the Bohr magneton, we rewrite the magnetic field as
+\begin{equation}
+    \mathbf{B}_{el}= -2 \frac{\mu}{4\pi}\frac{\mu_B}{r^3}
+    \bigg[\mathbf{l}-\mathbf{s}+\frac{3(\mathbf{s}\cdot \mathbf{r})\mathbf{r}}{r^2}
+    \bigg],\quad l\neq 0
+\end{equation}
+and thus rewrite the perturbed part of the Hamiltonian as
+\begin{equation}
+    \mathscr{H}_1= \bigg(\frac{\mu_0}{4\pi}\bigg)\bigg(2\mu_B \frac{\mu_I}{I}\bigg)
+    \frac{\mathbf{I}\cdot \mathbf{N}}{r^3}
+\end{equation}
+with 
+\begin{equation}
+    \mathbf{N}=\mathbf{l}-\mathbf{s}+\frac{3(\mathbf{s}\cdot \mathbf{r})\mathbf{r}}{r^2}.
+\end{equation}
+
+We create zeroth-order wave equations \(\ket{\gamma IjFM_f}\) which are linear combinations of \(\ket{\gamma IM_I jm_j}\) where
+\begin{equation}
+    \mathbf{F}= \mathbf{I} + \mathbf{j}
+\end{equation}
+with $F$ being the new total angular momentum. According to perturbation theory we write our corrected Hamiltonian $\mathscr{H}$, wave equation $\Psi$, and energy $E$ in the form
+\begin{equation}
+    \begin{split}
+        \mathscr{H}&=\mathscr{H}_0+\lambda\mathscr{H}_1\\
+        \Psi&=\Psi_0+\lambda\Psi_1+\lambda^2 \Psi_2+...\\
+        E&=E_0+\lambda E_1+\lambda^2 E_2+...
+    \end{split}
+\end{equation}
+where $\lambda$ is a constant. We use these new perturbation expansions to solve the Schr\"odinger equation such that
+\begin{equation}
+    \mathscr{H}\Psi= E\Psi
+\end{equation}
+then, retaining terms up to the first order
+\begin{equation}
+   (\mathscr{H}_0+\lambda\mathscr{H}_1)(\Psi_0+\lambda\Psi_1)=
+   (E_0+\lambda E_1)(\Psi_0+\lambda\Psi_1)
+\end{equation}
+and
+\begin{equation}
+   \mathscr{H}_0\Psi_0+ \lambda\mathscr{H}_1\Psi_0
+   +
+   \lambda\mathscr{H}_0\Psi_1+\lambda^2\mathscr{H}_1\Psi_1=
+   E_0\Psi_0+\lambda E_1\Psi_0+\lambda E_0 \Psi_1+ \lambda^2E_1\Psi_1 
+\end{equation}
+using the fact that
+\begin{equation}
+\begin{split}
+        \mathscr{H}_0\Psi_0-E_0\Psi_0=0\\
+        \mathscr{H}_1\Psi_1-E_1\Psi_1=0
+\end{split}
+\end{equation}
+we then have
+\begin{equation}
+   \lambda\mathscr{H}_1\Psi_0
+   +
+   \lambda\mathscr{H}_0\Psi_1=
+   \lambda E_1\Psi_0+\lambda E_0 \Psi_1 
+\end{equation}
+Rearranging, removing the common factor of $\lambda$, and acting from the left by $\Psi_0$
+\begin{equation}
+   \Psi_0^\dagger \mathscr{H}_1\Psi_0
+   +
+   \Psi_0^\dagger \mathscr{H}_0\Psi_1=
+   \Psi_0^\dagger E_1\Psi_0+ \Psi_0^\dagger E_0 \Psi_1 
+\end{equation}
+which after integration reduces to
+\begin{equation}
+  E_1=\bra{\Psi_0} \mathscr{H}_1 \ket{\Psi_0}
+\end{equation}
+which allows us to define our energy due to hyperfine structure as 
+\begin{equation}
+    \Delta E =\bra{\gamma IjFM_f}\mathscr{H}_1\ket{\gamma IjFM_f}.
+\end{equation}
+We may project $\mathbf{N}$ onto $\mathbf{j}$ such that $\mathbf{I}\cdot\mathbf{N}= (\mathbf{I}\cdot \mathbf{j})(\mathbf{j}\cdot \mathbf{N})$ because we are only using matrix elements that are diagonal in $j$. This changes our Hamiltonian to
+\begin{equation}
+    \mathscr{H}_1= \bigg(\frac{\mu_0}{4\pi}\bigg)\bigg(2\mu_B \frac{\mu_I}{I}\bigg)
+    \frac{\mathbf{N} \cdot \mathbf{j}}{j(j+1)}\frac{\mathbf{I}\cdot\mathbf{j}}{r^3}.
+\end{equation}
+Then
+\begin{equation}
+    \Delta E =\bigg(\frac{\mu_0}{4\pi}\bigg)\bigg(2\mu_B \frac{\mu_I}{I}\bigg)
+    \bigg \langle \frac{\mathbf{N} \cdot \mathbf{j}}{j(j+1)r^3}\bigg \rangle
+    \frac{1}{2} \{F(F+1)-j(j+1)-I(I+1)\}
+\end{equation}
+\begin{equation}
+    =a_j\{F(F+1)-j(j+1)-I(I+1)\}
+\end{equation}
+where
+\begin{equation}
+    a_j=\bigg(\frac{\mu_0}{4\pi}\bigg)\bigg(2\mu_B \frac{\mu_I}{I}\bigg)
+    \bigg \langle \frac{\mathbf{N} \cdot \mathbf{j}}{j(j+1)r^3}\bigg \rangle
+    ,\quad l\neq 0
+\end{equation}
+we have,
+\begin{equation}
+    \begin{split}
+    \mathbf{N} \cdot \mathbf{j}&=
+    (\mathbf{l}-\mathbf{s})(\mathbf{l}+\mathbf{s})+\frac{3( \mathbf{s}\cdot \mathbf{r} )\mathbf{r}}{r^2}
+    \cdot (\mathbf{l}+ \mathbf{s})\\
+    &= \mathbf{l}^2 -\mathbf{s}^2 +3(\mathbf{s} \cdot \mathbf{r})
+    (\mathbf{r}\cdot \mathbf{l})/r^2 +3(\mathbf{s} \cdot \mathbf{r})
+    (\mathbf{r}\cdot \mathbf{s})/r^2
+    \end{split}
+\end{equation}
+and using the fact that \(\hbar \mathbf{l}=\mathbf{r}\cross \mathbf{p}\) implies that \(\mathbf{r}\cdot\mathbf{l}=0\) and due to the triangle rule of angular momentum algebra
+\begin{equation}
+    \mathbf{s}^2 +3(\mathbf{s} \cdot \mathbf{r})^2/r^2=0
+\end{equation}
+ which reduces our equation to 
+\begin{equation}
+    \mathbf{N}\cdot \mathbf{j} = \mathbf{l}^2
+\end{equation}
+and, taking expectation values leads to
+\begin{equation}
+    a_j=\bigg(\frac{\mu_0}{4\pi}\bigg)\bigg(2\mu_B \frac{\mu_I}{I}\bigg)
+    \bigg \langle \frac{1}{r^3}\bigg \rangle
+    \frac{l(l+1)}{j(j+1)}
+    ,\quad l\neq 0
+\end{equation}
+
+One thing of note for the above equation is that it vanishes for an electron in an s state ($l=0$) which is the particular case being studied. The fact that an electron in an s state has a nonzero probability density at the origin 
+\begin{equation}
+    \abs{\psi(0)}^2\neq 0
+\end{equation}
+gives rise to an interaction between the nuclear moment and the intrinsic spin magnetic moment of the electron in an s-state. This is known as the Fermi contact interaction, and it has the form
+\begin{align}
+    \begin{split}
+        \mathscr{H}_1=a_s\mathbf{I}\cdot\mathbf{s}\\
+       = a_s\mathbf{I}\cdot\mathbf{J}
+    \end{split}
+\end{align}
+since for the s electron \(l=0 \implies s=J\), with
+\begin{equation}
+    a_s = \bigg(\frac{\mu_0}{4\pi}\bigg)\bigg(2\mu_B \frac{\mu_I}{I}\bigg)
+    (8\pi/3)\abs{\psi(0)}^2,\quad l=0.
+\end{equation}
+A relativistic treatment is not necessary for this derivation. We take semiclassical considerations, such as the fact that for an electron in an s-state, there is a spherically symmetric distribution of spin magnetism which does not vanish at the origin. The spin magnetic moment per unit volume at the origin is \cite{woodgate3}
+\begin{equation}
+    \mathbf{P}_0= \boldsymbol{\mu}_s\abs{\psi (0)}^2.
+\end{equation}
+where \cite{drakespringer2006}
+\begin{equation}
+    \boldsymbol{\mu}_s=\frac{q\hbar}{2m}g_s\mathbf{s}
+\end{equation}
+where $s$ is the spin of the test charge, $\frac{q\hbar}{2m}$ is the nuclear magneton and $g_s$ is its gyromagnetic ratio. The magnetic field arising from a spherical shell of uniform magnetization vanishes, so the resulting field is the same as that due to a sphere of uniform magnetization \(\mathbf{P}_0\),
+%figure out why there is a factor of 1/3
+\begin{equation}
+    \mathbf{B}= (2\mu_0/3)\mathbf{P}_0=(2\mu_0/3)\mathbf{\mu}_s
+    \abs{\psi(0)}^2
+\end{equation}
+This implies that the magnetic interaction of a point nuclear magnetic moment with this field is
+\begin{equation}
+    \mathscr{H}=-(2\mu_0/3)\mu_I\cdot \mu_s \abs{\psi(0)}^2
+\end{equation}
+Using this we can calculate \(a_s\) for the case for hydrogen in an s-state,
+\begin{equation}
+    \abs{\psi(0)}^2 = \frac{Z^3}{\pi a_0^3 n^3}
+\end{equation}
+therefore
+\begin{equation}
+    a_s = \bigg(\frac{\mu_0}{4\pi}\bigg)\bigg(2\mu_B \frac{\mu_I}{I}\bigg)
+    \frac{8}{3}\frac{Z^3}{a_0^3 n^3},\quad l=0
+\end{equation}
+Although this derivation is useful to have, the experimental value is several orders of magnitude more accurate than the theoretical. This equation will lead to a value accurate to one part in a thousand, whereas the experimental value is accurate to one part in a trillion.
+
+%Another useful way of understanding the spin-spin coupling in the ground was presented by Feynman. Using the fact that we have the spin of the electron interacting with the spin of the proton we can actually separate the ground state of hydrogen into four separate states. These are the uncoupled states \(\ket{++}\) for electron spin up proton spin up, \(\ket{+-}\) for electron spin up and proton spin down, \(\ket{-+}\) for electron spin down and proton spin up, and \(\ket{--}\) for electron spin down and proton spin down. The first plus or minus sign always refers to the electron and the second always refers to the proton. To allow us to describe our states we need a set of Pauli spin operators for our states. For the case $j=1/2$
+%\begin{equation}
+%    \begin{split}
+%%        \sigma_z\bra{+}=+\bra{+}\\
+%        \sigma_z\bra{-}=-\bra{-}\\
+%        \sigma_x\bra{+}=+\bra{-}\\
+%        \sigma_x\bra{-}=+\bra{+}\\
+%        \sigma_y\bra{+}=+i\bra{-}\\
+%        \sigma_y\bra{-}=-i\bra{+}\\
+%    \end{split}
+%\end{equation}
+%We begin constructing the Hamiltonian
+%\begin{equation}
+%    \bm{\sigma}^e\cdot\bm{\sigma}^p=\sigma_x^e\sigma_x^p+\sigma_y^e\sigma_y^p+\%sigma_z^e\sigma_z^p
+%\end{equation}
+%\begin{equation}
+%    \Vec{H}=E_0+A\bm{\sigma}^e\cdot\bm{\sigma}^p
+%\end{equation}
+%where $\mathbf{S}_e=\boldsymbol{\sigma}^e \hbar/2 $ for the electron and %$\mathbf{S}_p=\boldsymbol{\sigma}^p \hbar/2 $ for the proton. The only thing we need from this Hamiltonian is the last term as we can simply take $E_0=0$. To find how the different states affect the energy we must generate the Hamiltonian matrix elements by operating the Hamiltonian on all combinations of matrix elements. Due to the basis set being orthogonal, only 6 terms are nonzero.
+%\begin{equation}
+%    \begin{split}
+%%        \bra{++}\Vec{H}\ket{++}&=\bra{++}A(-\ket{--}+\ket{--}+\ket{++}=A\\
+%        \bra{+-}\Vec{H}\ket{+-}&=\bra{+-}A(+\ket{-+}+\ket{-+}-\ket{+-}=-A\\
+%        \bra{-+}\Vec{H}\ket{+-}&=\bra{-+}A(+\ket{-+}+\ket{-+}-\ket{+-}=2A\\
+%        \bra{+-}\Vec{H}\ket{-+}&=\bra{+-}A(+\ket{+-}+\ket{+-}-\ket{-+}=2A\\
+%        \bra{-+}\Vec{H}\ket{-+}&=\bra{-+}A(+\ket{+-}+\ket{+-}-\ket{-+}=-A\\
+%%        \bra{--}\Vec{H}\ket{--}&=\bra{--}A(-\ket{++}+\ket{++}+\ket{--}=A\\
+ %   \end{split}%
+%\end{equation}
+%With our resulting matrix being.
+%\begin{equation}
+%    \Vec{H}=
+%    \begin{pmatrix}
+%    A  &0  &0  &0\\
+%    0  &-A &2A &0\\
+%    0  &2A &-A &0\\
+%%    0  &0  &0  &A
+ %   \end{pmatrix}
+%\end{equation}
+%Which leave us with the following differential equations for the four amplitudes $C_i$
+%\begin{equation}
+%    \begin{split}
+%        i\hbar \Dot{C}_1 &=AC_1\\
+%        i\hbar \Dot{C}_2 &=-AC_2+2AC_3\\
+%        i\hbar \Dot{C}_3 &=2AC_2-AC_3\\
+%        i\hbar \Dot{C}_4 &=AC_4
+%    \end{split}
+%\end{equation}
+%We can see from previous equations how the spin-spin operator acts on a particular eigenstate such that
+%\begin{equation}
+%    \begin{split}
+%        \boldsymbol{\sigma}^e \cdot  \boldsymbol{\sigma}^p \ket{++}&=\ket{++}\\
+%        \boldsymbol{\sigma}^e \cdot  \boldsymbol{\sigma}^p %\ket{+-}&=2\ket{-+}-\ket{+-}\\
+%        \boldsymbol{\sigma}^e \cdot  \boldsymbol{\sigma}^p %\ket{-+}&=2\ket{+-}-\ket{-+}\\
+%        \boldsymbol{\sigma}^e \cdot  \boldsymbol{\sigma}^p \ket{--}&=\ket{--}
+%    \end{split}
+%\end{equation}
+%We can define the first and final equations in that set as
+%\begin{equation}
+%    \begin{split}
+%        \boldsymbol{\sigma}^e \cdot  \boldsymbol{\sigma}^p %\ket{++}&=2\ket{++}-\ket{++}\\
+%%        \boldsymbol{\sigma}^e \cdot  \boldsymbol{\sigma}^p %\ket{--}&=2\ket{--}-\ket{--}
+%    \end{split}
+%\end{equation}
+%and with that we can define a new operator $P_{spinexchange}$ which has the %properties
+%\begin{equation}
+%    \begin{split}
+%        P_{spinexchange}\ket{++}&=\ket{++}\\
+%        P_{spinexchange}\ket{+-}&=\ket{-+}\\
+%        P_{spinexchange}\ket{-+}&=\ket{+-}\\
+%        P_{spinexchange}\ket{--}&=\ket{--}
+%    \end{split}
+%\end{equation}
+%using this we can define our operator as
+%\begin{equation}
+%    \boldsymbol{\sigma}^e \cdot  \boldsymbol{\sigma}^p=2P_{spinexchange}-1
+%\end{equation}
+%We now move on to calculate the energies of the stationary states. We define
+%\begin{equation}
+%%    C_i = a_i e^{-(i/\hbar)Et}
+%\end{equation}
+%where $a_i$ is a time independent coefficient
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,633 @@
+\section{Hyperfine Angular Momentum Long Form}
+The purpose of this appendix is to expand upon the derivation of the two-photon transition in the hyperfine levels of hydrogen. Beginning from the calculation of the transition integrals, we have
+\begin{equation}
+    \mathcal{M}^{-\gamma\gamma}(i\rightarrow f)=
+    \sum_{n}
+    \frac{
+    \bra{f}\hat{e}_{2}\cdot
+    \Vec{r}\ket{n}
+    \bra{n}\hat{e}_{1}\cdot\Vec{r}\ket{i}}
+    {\omega_{ni}-\omega_{1}}
+    +
+    \frac{
+    \bra{f}\hat{e}_{1}\cdot\Vec{r}\ket{n}
+    \bra{n}\hat{e}_{2}\cdot\Vec{r}\ket{i}}
+    {\omega_{ni}-\omega_{2}}
+\end{equation}
+where
+\begin{equation}
+    \hat{e_r}\cdot\Vec{r}= e_0r_0-e_+r_--e_-r_+
+\end{equation}
+Considering all the quantum numbers that are necessary the initial state will be
+\begin{equation}
+    \bra{1s l s J I F M_f}
+\end{equation}
+with intermediate state
+\begin{equation}
+    \bra{np l's'J'I'F'M_f'}
+\end{equation}
+and final state
+\begin{equation}
+        \bra{1s l'' s'' J'' I'' F'' M_f''}
+\end{equation}
+Consider only on one of the state combinations
+\begin{align}
+\begin{split}
+        \bra{1s l'' s'' J'' I'' F'' M_f''}
+    e_{20}r_0-e_{2+}r_--e_{2-}r_+
+    \ket{np l's'J'I'F'M_f'}\\
+    \cross\bra{np l's'J'I'F'M_f'}
+    e_{10}r_0-e_{1+}r_--e_{1-}r_+
+    \ket{1s l s J I F M_f}
+\end{split}
+\end{align}
+Breaking up these equations for ease of use into
+\begin{align}
+\begin{split}
+    \bra{1s l'' s'' J'' I'' F'' M_f''}
+    e_{20}r_0
+    \ket{np l's'J'I'F'M_f'}\\
+    -\bra{1s l'' s'' J'' I'' F'' M_f''}
+    e_{2+}r_-
+    \ket{np l's'J'I'F'M_f'}\\
+    -\bra{1s l'' s'' J'' I'' F'' M_f''}
+    e_{2-}r_+
+    \ket{np l's'J'I'F'M_f'}
+\end{split}
+\end{align}
+we then use the Wigner Eckart theorem in the form \cite{edmonds}
+\begin{equation}
+    (\gamma'j'm'\abs{T^k_q}\gamma jm)=(-1)^{j-m}
+    \begin{pmatrix}
+    j'  &k &j \\
+    -m' &q &m
+    \end{pmatrix}
+    (\gamma'j'\abs{\abs{T^k}}\gamma j)
+\end{equation}
+to break up (A.7) into its reduced matrix element and 3j symbols
+\begin{align}
+\begin{split}
+    \bra{1s l'' s'' J'' I'' F'' M_f''}
+    e_{20}r_0
+    \ket{np l's'J'I'F'M_f'}\\
+    -\bra{1s l'' s'' J'' I'' F'' M_f''}
+    e_{2+}r_-
+    \ket{np l's'J'I'F'M_f'}\\
+    -\bra{1s l'' s'' J'' I'' F'' M_f''}
+    e_{2-}r_+
+    \ket{np l's'J'I'F'M_f'}\\
+    =(1sl'' s'' J'' I'' F''\abs{\abs{r}}np l's'J'I'F')(-1^{F'-M_f'})\\
+    \cross[
+    (e_{20})
+    \begin{pmatrix}
+    F''    & 1 & F'\\
+    -M_f'' & 0 &M_f'
+    \end{pmatrix}
+    -
+    (e_{2-})
+    \begin{pmatrix}
+    F''    & 1  & F'\\
+    -M_f'' & -1 &M_f'
+    \end{pmatrix}
+    -
+    (e_{2+})
+    \begin{pmatrix}
+    F''    & 1 & F'\\
+    -M_f'' & 1 &M_f'
+    \end{pmatrix}
+    ]
+\end{split}
+\end{align}
+We do the same thing for the first photon.
+\begin{align}
+\begin{split}
+    \bra{np l' s' J' I' F' M_f'}
+    e_{20}r_0
+    \ket{1s lsJIFM_f}\\
+    -\bra{np l' s' J' I' F' M_f'}
+    e_{2+}r_-
+    \ket{1s lsJIFM_f}\\
+    -\bra{np l' s' J' I' F' M_f'}
+    e_{2-}r_+
+    \ket{1s lsJIFM_f}\\
+    =(npl' s' J' I' F'\abs{\abs{r}}1s lsJIF)(-1^{F-M_f})\\
+    \cross[
+    (e_{10})
+    \begin{pmatrix}
+    F'    & 1 & F\\
+    -M_f' & 0 &M_f
+    \end{pmatrix}
+    -
+    (e_{1-})
+    \begin{pmatrix}
+    F'    & 1  & F\\
+    -M_f' & -1 &M_f
+    \end{pmatrix}
+    -
+    (e_{1+})
+    \begin{pmatrix}
+    F'    & 1 & F\\
+    -M_f' & 1 &M_f
+    \end{pmatrix}
+    ]
+\end{split}
+\end{align}
+As above these two equations are multiplied together.
+\begin{align}
+    \begin{split}
+            =(1sl'' s'' J'' I'' F''\abs{\abs{r}}npl's'J'I'F')
+            (npl' s' J' I' F'\abs{\abs{r}}1s lsJIF)
+            (-1^{F'-M_f'})(-1^{F-M_f})\\
+            \cross
+            [
+            (e_{20}e_{10})
+            \begin{pmatrix}
+             F''    & 1 & F'\\
+            -M_f'' & 0 &M_f'
+            \end{pmatrix}
+            \begin{pmatrix}
+            F'    & 1 & F\\
+            -M_f' & 0 &M_f
+            \end{pmatrix}\\
+            -
+            (e_{20}e_{1+})
+            \begin{pmatrix}
+             F''    & 1 & F'\\
+            -M_f'' & 0 &M_f'
+            \end{pmatrix}
+            \begin{pmatrix}
+            F'    & 1 & F\\
+            -M_f' & -1 &M_f
+            \end{pmatrix}\\
+            -
+            (e_{20}e_{1-})
+            \begin{pmatrix}
+             F''    & 1 & F'\\
+            -M_f'' & 0 &M_f'
+            \end{pmatrix}
+            \begin{pmatrix}
+            F'    & 1 & F\\
+            -M_f' & 1 &M_f
+            \end{pmatrix}\\
+            -
+            (e_{2+}e_{10})
+            \begin{pmatrix}
+             F''    & 1 & F'\\
+            -M_f'' & -1 &M_f'
+            \end{pmatrix}
+            \begin{pmatrix}
+            F'    & 1 & F\\
+            -M_f' & 0 &M_f
+            \end{pmatrix}\\
+            +
+            (e_{2+}e_{1+})
+            \begin{pmatrix}
+             F''    & 1 & F'\\
+            -M_f'' & -1 &M_f'
+            \end{pmatrix}
+            \begin{pmatrix}
+            F'    & 1 & F\\
+            -M_f' & -1 &M_f
+            \end{pmatrix}\\
+            -
+            (e_{2+}e_{1-})
+            \begin{pmatrix}
+             F''    & 1 & F'\\
+            -M_f'' & -1 &M_f'
+            \end{pmatrix}
+            \begin{pmatrix}
+            F'    & 1 & F\\
+            -M_f' & 1 &M_f
+            \end{pmatrix}\\
+            -
+            (e_{2-}e_{10})
+            \begin{pmatrix}
+             F''    & 1 & F'\\
+            -M_f'' & 1 &M_f'
+            \end{pmatrix}
+            \begin{pmatrix}
+            F'    & 1 & F\\
+            -M_f' & 0 &M_f
+            \end{pmatrix}\\
+            +
+            (e_{2-}e_{1+})
+            \begin{pmatrix}
+             F''    & 1 & F'\\
+            -M_f'' & 1 &M_f'
+            \end{pmatrix}
+            \begin{pmatrix}
+            F'    & 1 & F\\
+            -M_f' & -1 &M_f
+            \end{pmatrix}\\
+            +
+            (e_{2-}e_{1-})
+            \begin{pmatrix}
+             F''    & 1 & F'\\
+            -M_f'' & 1 &M_f'
+            \end{pmatrix}
+            \begin{pmatrix}
+            F'    & 1 & F\\
+            -M_f' & 1 &M_f
+            \end{pmatrix}
+            ]
+    \end{split}
+\end{align}
+We then set our values of our quantum numbers to those that are allowed by the triangular rule \(F''=F'=1\) and \(F=0\) and sum over the magnetic quantum numbers.
+\begin{align}
+    \begin{split}
+            =\sum_{M_f'=-1}^1\sum_{M_f=-1}^1
+            (1sl'' s'' J'' I'' 1\abs{\abs{r}}npl's'J'I'1)
+            (npl' s' J' I' 1\abs{\abs{r}}1s lsJI0)\\
+            \cross (-1^{F'-M_f'})(-1^{F-M_f})\\
+            \cross
+            [
+            (e_{20}e_{10})
+            \begin{pmatrix}
+             1    & 1 & 1\\
+            -M_f'' & 0 &M_f'
+            \end{pmatrix}
+            \begin{pmatrix}
+            1    & 1 & 0\\
+            -M_f' & 0 &M_f
+            \end{pmatrix}\\
+            -
+            (e_{20}e_{1+})
+            \begin{pmatrix}
+             1    & 1 & 1\\
+            -M_f'' & 0 &M_f'
+            \end{pmatrix}
+            \begin{pmatrix}
+            1    & 1 & 0\\
+            -M_f' & -1 &M_f
+            \end{pmatrix}\\
+            -
+            (e_{20}e_{1-})
+            \begin{pmatrix}
+             1    & 1 & 1\\
+            -M_f'' & 0 &M_f'
+            \end{pmatrix}
+            \begin{pmatrix}
+            1    & 1 & 0\\
+            -M_f' & 1 &M_f
+            \end{pmatrix}\\
+            -
+            (e_{2+}e_{10})
+            \begin{pmatrix}
+             1    & 1 & 1\\
+            -M_f'' & -1 &M_f'
+            \end{pmatrix}
+            \begin{pmatrix}
+            1    & 1 & 0\\
+            -M_f' & 0 &M_f
+            \end{pmatrix}\\
+            +
+            (e_{2+}e_{1+})
+            \begin{pmatrix}
+             1    & 1 & 0\\
+            -M_f'' & -1 &M_f'
+            \end{pmatrix}
+            \begin{pmatrix}
+            1    & 1 & 0\\
+            -M_f' & -1 &M_f
+            \end{pmatrix}\\
+            -
+            (e_{2+}e_{1-})
+            \begin{pmatrix}
+             1    & 1 & 1\\
+            -M_f'' & -1 &M_f'
+            \end{pmatrix}
+            \begin{pmatrix}
+            1    & 1 & 0\\
+            -M_f' & 1 &M_f
+            \end{pmatrix}\\
+            -
+            (e_{2-}e_{10})
+            \begin{pmatrix}
+             1    & 1 & 1\\
+            -M_f'' & 1 &M_f'
+            \end{pmatrix}
+            \begin{pmatrix}
+            1    & 1 & 0\\
+            -M_f' & 0 &M_f
+            \end{pmatrix}\\
+            +
+            (e_{2-}e_{1+})
+            \begin{pmatrix}
+             1    & 1 & 1\\
+            -M_f'' & 1 &M_f'
+            \end{pmatrix}
+            \begin{pmatrix}
+            1    & 1 & 0\\
+            -M_f' & -1 &M_f
+            \end{pmatrix}\\
+            +
+            (e_{2-}e_{1-})
+            \begin{pmatrix}
+             1    & 1 & 1\\
+            -M_f'' & 1 &M_f'
+            \end{pmatrix}
+            \begin{pmatrix}
+            1    & 1 & 0\\
+            -M_f' & 1 &M_f
+            \end{pmatrix}
+            ]
+    \end{split}
+\end{align}
+
+Summing all the possible magnetic quantum numbers will give us 81 separate terms of which only 6 terms survive due to our selection rules
+\begin{equation}
+\abs{j-k}\leq j'\leq\abs{j+k}
+\end{equation}
+and 
+\begin{equation}
+    m+q=m'
+\end{equation}
+if
+\begin{equation}
+  m=m'=q=0  
+\end{equation}
+then
+\begin{equation}
+    j'+k+j=2k
+\end{equation}
+Where \(k\in \mathbb{Z}\)
+
+After calculating all the coefficients of the surviving terms we are left with
+\begin{equation}
+    \begin{split}
+        =\sqrt{\frac{1}{18}
+        }(1sl'' s'' J'' I'' 1\abs{\abs{r}}npl's'J'I'1)
+        (npl' s' J' I' 1\abs{\abs{r}}1s lsJI0)\\
+        (e_{20}e_{1+}-e_{2+}e_{10}+e_{2-}e_{1+}-
+        e_{2+}e_{1-}+e_{2-}e_{10}-e_{20}e_{1-})
+    \end{split}    
+\end{equation}
+where
+\begin{equation}
+    (e_{20}e_{1+}-e_{2+}e_{10}+e_{2-}e_{1+}-
+        e_{2+}e_{1-}+e_{2-}e_{10}-e_{20}e_{1-})=(e_2\cross e_1)
+\end{equation}
+Giving the same treatment to the case in which photon 2 is absorbed before photon 1 we arrive at a similar equation except the cross product is the opposite order. We then use the fact that
+\begin{equation}
+e_1\cross e_2=-e_2\cross e_1    
+\end{equation}
+This effect shows that this process cannot occur if the two photons being absorbed or emitted have the same energy. We know this intuitively through the angular momentum selection rules by the fact that the process with $\Delta F=1$ transports only one unit of angular momentum, whereas two photons of the exact energy emitted back-to-back can transport only zero or two units of angular momentum. Returning to our master equation we can see all the changes we have made.
+\begin{equation}
+\begin{split}
+    \mathcal{M}^{-\gamma\gamma}(i\rightarrow f)=\\
+    (e_2\cross e_1)(\sqrt{\frac{1}{18}})
+    \sum_{n}
+    \frac{
+    (1s\gamma '' J'' I'' 1\abs{\abs{r}}np\gamma J'I'1)
+    (np\gamma ' J' I' 1\abs{\abs{r}}1s \gamma JI0)}
+    {\omega_{n0}-\omega_{1}}\\
+       -
+    \frac{
+    (1s\gamma '' J'' I'' 1\abs{\abs{r}}np\gamma J'I'1)
+    (np \gamma J' I' 1\abs{\abs{r}}1s \gamma JI0)}
+    {\omega_{n0}-\omega_{2}}
+    \end{split}
+\end{equation}
+However we still need to strip out the dependence on the coupled spin of the proton \(I\) with total angular momenta \(J\) to give hyperfine \(F\) as well as the dependence of electron spin\(s\). To do this we used the version of the Wigner Eckart Theorem.
+\begin{equation}
+\begin{split}
+        (\gamma'j_1'j_2J'\abs{\abs{T(k)}}\gamma j_1 j_2 J)\\
+        =(-1)^{j_1'+j_2+J+k}[(2J+1)(2J'+1)]^{\frac{1}{2}}
+        \begin{Bmatrix}
+        j_1' & J'  &j_2\\
+        J    & j_1 &k
+        \end{Bmatrix}
+        (\gamma' j_1'\abs{\abs{T(k)}}\gamma j_1)
+\end{split}
+\end{equation}
+and apply it to our bra-ket pairs to give
+\begin{equation}
+\begin{split}
+        (\gamma''J''IF''\abs{\abs{r}}\gamma' J' I F')\\
+        =(-1)^{J''+I+F''+1}[(2F'+1)(2F''+1)]^{\frac{1}{2}}
+        \begin{Bmatrix}
+        J'' & F''  &I\\
+        F'    & J' &1
+        \end{Bmatrix}
+        (1sl''s'' J''\abs{\abs{r}}np l's' J')
+\end{split}
+\end{equation}
+and
+\begin{equation}
+\begin{split}
+        (\gamma'J'IF'\abs{\abs{r}}\gamma J I F)\\
+        =(-1)^{J'+I+F'+1}[(2F+1)(2F'+1)]^{\frac{1}{2}}
+        \begin{Bmatrix}
+        J' & F'  &I\\
+        F    & J &1
+        \end{Bmatrix}
+        (np l' s' J'\abs{\abs{r}}1s ls J)
+\end{split}
+\end{equation}
+We then apply the same Wigner Eckart theorem a second time, except this time stripping out dependence on spin \(s\) and total angular momentum \(J\). Multiplying the two equations together results in.
+\begin{equation}
+    \begin{split}
+        (1sl'' s'' J'' I'' 1\abs{\abs{r}}npl's'J'I'1)
+        (npl' s' J' I' 1\abs{\abs{r}}1s lsJI0)=\\
+        (-1)^{J'+I+F'+k+J''+I+F''+k}\\
+        [(2F+1)(2F'+1)]^{\frac{1}{2}}
+         [(2F'+1)(2F''+1)]^{\frac{1}{2}}
+         [(2J+1)(2J'+1)]^{\frac{1}{2}}
+         [(2J'+1)(2J''+1)]^{\frac{1}{2}}\\
+        \begin{Bmatrix}
+        J' & F'  &I\\
+        F    & J &1
+        \end{Bmatrix}
+        \begin{Bmatrix}
+        J'' & F''  &I\\
+        F'    & J' &1
+        \end{Bmatrix}
+        \begin{Bmatrix}
+        l' & J'  &s\\
+        J    & l &k
+        \end{Bmatrix}
+        \begin{Bmatrix}
+        l'' & J''  &s\\
+        J'    & l' &k
+        \end{Bmatrix}
+        (1sl''\abs{\abs{r}}npl')(npl'\abs{\abs{r}}1sl)
+    \end{split}
+\end{equation}
+We then substitute in the angular quantum numbers \(F=0\), \(F'=F''=1\), \(I=\frac{1}{2}\), \(s=\frac{1}{2}\), \(l=l''=0\), \(l'=1\), and sum over our possible total angular momenta for our intermediate p states with \(J=\frac{1}{2}\quad \rm{or} \quad \frac{3}{2}\). The last part in particular causes us to arrive at a very interesting result
+\begin{equation}
+    \begin{split}
+        (1sl'' s'' J'' I'' F''\abs{\abs{r}}npl's'J'I'F')
+        (npl' s' J' I' F'\abs{\abs{r}}1s lsJIF)=\\
+        {\frac{\sqrt{2}}{3}}(1s\abs{\abs{r}}np)(np\abs{\abs{r}}1s)        -{\frac{\sqrt{2}}{3}}(1s\abs{\abs{r}}np)(np\abs{\abs{r}}1s)
+    \end{split}    
+\end{equation}
+which is of course zero. This would raise many red flags but our entire equation does not collapse because of the fine structure energy splitting in the p states for the corresponding \(J\). We rewrite our total equation as.
+\begin{equation}
+\begin{split}
+    \mathcal{M}^{-\gamma\gamma}(i\rightarrow f)=\\
+    \frac{1}{9}(e_2\cross e_1)
+    \sum_{n}
+    \Bigg[
+    \frac{
+    (1s\abs{\abs{r}}np)(np\abs{\abs{r}}1s)}     {\omega_{p_{\frac{3}{2}}0}-\omega_{1}}
+    +
+    \frac{
+    (1s\abs{\abs{r}}np)(np\abs{\abs{r}}1s) }    {\omega_{p_{\frac{1}{2}}0}-\omega_{2}}
+    \Bigg]\\
+    -
+    \Bigg[
+    \frac{
+    (1s\abs{\abs{r}}np)(np\abs{\abs{r}}1s) }    {\omega_{p_{\frac{1}{2}}0}-\omega_{1}}
+    +
+    \frac{
+    (1s\abs{\abs{r}}np)(np\abs{\abs{r}}1s) }    {\omega_{p_{\frac{3}{2}}0}-\omega_{2}}
+    \Bigg]
+    \end{split}
+\end{equation}
+Now we solve for the reduced matrix elements. The beautiful power of the Wigner Eckart Theorem is that we can use any matrix elements we want to evaluate the reduced matrix elements so long as they have the same reduced matrix element. So we use \(l=1\) \(m_l=0\) for the p states and \(z\) for the operator. Rearranging the Wigner Eckart theorem gives
+\begin{equation}
+    (\gamma'j'\abs{\abs{T(k)}}\gamma j)=
+    \frac{(\gamma'j'm'\abs{T(kq)}\gamma j m)}
+    {
+    (-1)^{j'-m'}
+    \begin{pmatrix}
+    j'  &k  &j\\
+    -m' &q  &m
+    \end{pmatrix}
+    }
+\end{equation}
+Substituting in the quantum numbers for the initial state to intermediate state yields
+\begin{equation}
+    (np\abs{\abs{T(k)}}1s)=
+    \frac{\bra{np10}z\ket{1s 0 0}}
+    {
+    (-1)^{1-0}
+    \begin{pmatrix}
+    1   &1  &0\\
+    0   &0  &0
+    \end{pmatrix}
+    }
+\end{equation}
+and for intermediate to final
+\begin{equation}
+    (1s\abs{\abs{T(k)}}np)=
+    \frac{\bra{1s00}z\ket{np 1 0}}
+    {
+    (-1)^{0-0}
+    \begin{pmatrix}
+    0   &1  &1\\
+    0   &0  &0
+    \end{pmatrix}
+    }
+\end{equation}
+Evaluating for the 3j symbols gives an overall multiplying factor of \(-3\). The resulting equation thus becomes
+\begin{equation}
+\begin{split}
+    \mathcal{M}^{-\gamma\gamma}(i\rightarrow f)=\\
+    -\frac{1}{3}(e_2\cross e_1)
+    \sum_{n}
+    \Bigg[
+    \frac{
+    \bra{1s}z\ket{np}\bra{np}z\ket{1s}}     {\omega_{p_{\frac{3}{2}}0}-\omega_{1}}
+    +
+    \frac{
+    \bra{1s}z\ket{np}\bra{np}z\ket{1s}} {\omega_{p_{\frac{1}{2}}0}-\omega_{2}}
+    \Bigg]\\
+    -
+    \Bigg[
+    \frac{
+    \bra{1s}z\ket{np}\bra{np}z\ket{1s}} {\omega_{p_{\frac{1}{2}}0}-\omega_{1}}
+    +
+    \frac{
+    \bra{1s}z\ket{np}\bra{np}z\ket{1s}} {\omega_{p_{\frac{3}{2}}0}-\omega_{2}}
+    \Bigg]
+    \end{split}
+\end{equation}
+Which is an expression that can be evaluated by direct calculation.
+
+\section{Sturmian Basis Sets Calculation}
+This section will detail the full derivation of the Sturmian basis sets used in this work. For our matrix \(O\) we find the largest off diagonal element \(O_{nm}\). We then transform our matrix using a rotational matrix \(Q\) where \cite{jacobi}
+   \begin{equation}
+     Q=\begin{bmatrix}
+     1  &       &          &          &          &          &  \\
+        &\hdots &          &          &          &          &  \\
+        &       & \cos{(\theta)}  &\hdots   &-\sin{(\theta)}     & & \\  
+        &       &\vdots &1      &\vdots & & \\  
+                &       &\sin{(\theta)}   &\hdots   & \cos{(\theta)} & &\\
+          &&&&&\hdots  \\    
+            & & & & & &1
+    \end{bmatrix}
+ \end{equation}
+  \begin{equation}
+      \tan(2\theta)=\frac{O_{nm}}{O_{nn}-O_{mm}}
+  \end{equation}
+  This transformation is performed iteratively until all of the off diagonal elements are sufficiently small. We then set the total transformation matrix to \(T\) such that.
+  \begin{equation}
+      T=\prod_{i} Q_{i}
+  \end{equation}
+
+\begin{equation}
+     T^{T}OT=\begin{bmatrix}
+     I_{1}       & 0      & 0      &\hdots   & 0     \\
+     0           & I_{2}  & 0      &\hdots   & 0     \\
+     0           & 0      & I_{3}  &\hdots   & 0     \\  
+    \vdots       & \vdots &\vdots  &\ddots   &\vdots \\  
+     0           & 0      & 0      &\hdots   & I_{n} 
+    \end{bmatrix}
+ \end{equation}
+Once the matrix is diagonalized we then apply a scale-change matrix to transform it to the identity matrix defined by
+\begin{equation}
+    S=\begin{bmatrix}
+     \frac{1}{I_{1}^{\frac{1}{2}}}       & 0      & 0      &\hdots   & 0     \\
+     0            &  \frac{1}{I_{2}^{\frac{1}{2}}}  & 0      &\hdots   & 0     \\
+     0            & 0      &  \frac{1}{I_{3}^{\frac{1}{2}}}  &\hdots   & 0     \\  
+     \vdots       & \vdots & \vdots  & \ddots  & \vdots \\  
+     0            & 0      & 0       &\hdots   & \frac{1}{I_{n}^{\frac{1}{2}}} 
+    
+    
+    \end{bmatrix}
+\end{equation}
+such that
+\begin{equation}
+    S^{T}T^{T}OTS=1
+\end{equation}
+We combine the two transformations as \(R=TS\) so that.
+\begin{equation}
+    R^{T}OR=1
+\end{equation}
+Once total transformation matrix is generated we then generate the Hamiltonian matrix with matrix elements \(H_{nm}=\bra{\psi_{m}}H\ket{\psi_{n}}\) which we then transform to our new basis set using the transformation matrix
+\begin{equation}
+    H^{\prime}=R^{T}HR
+\end{equation}
+We then diagonalize the resulting matrix to give us the eigenvalues and eigenvectors for the basis set by applying Jacobi's method again to find an orthogonal transformation W.
+\begin{equation}
+    W^{T}H^{\prime}W=\begin{bmatrix}
+    \lambda_{1} &0             &\hdots    &0 \\
+    0           &\lambda_{2}   &\hdots    &0 \\
+    \vdots      &\vdots        &\ddots    &\vdots \\
+    0           &0             &0         &\lambda_{n}
+    
+    
+                     \end{bmatrix}
+\end{equation}
+The eigenvectors in the original basis set are given by applying the inverse transformation transformation to the eigenvectors of $H'$ to obtain
+\begin{equation}
+    \Psi^{q}(r)=
+    \sum_{n,n^{\prime}}r^{n}e^{-\alpha r}Y_{l}^{m}(\theta,\phi)R_{n^{\prime},n}W_{n,q}
+\end{equation}
+The n eigenvectors $ \Psi^{q}(r), \quad q=1,...,\abs{n}$ form the set of pseudostates with eigenvalues $\lambda_q, \quad q=1,...,n$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

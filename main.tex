@@ -1,0 +1,144 @@
+\documentclass[12pt,twoside]{thesis92e}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{physics}
+\usepackage{gnuplottex}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{mathrsfs}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+%\usepackage[style=phys]{biblatex}
+\usepackage{setspace}
+\usepackage{csquotes}
+\usepackage{comment}
+\usepackage{booktabs} % For \toprule, \midrule and \bottomrule
+\usepackage{siunitx} % Formats the units and values
+\usepackage{pgfplotstable} % Generates table from .csv
+\usepackage[colorlinks=false]{hyperref}
+\usepackage[square, numbers]{natbib}
+\usepackage[titletoc, title]{appendix}
+%\newcommand{\appendixnumberline}[1]{Appendix\space}
+\renewcommand\appendixtocname{Appendix}
+
+
+
+
+%\bibliography{bib-refs.bib}
+%\addbibresource{references.bib}
+\pagestyle{fancy}
+\graphicspath{{images/}}
+%\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
+%\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
+\setlength{\headheight}{15pt}
+\fancyhead[]{}
+\fancyhead[RO,LE]{Two Photon Processes within the Hyperfine Structure of Hydrogen}
+\fancyfoot{}
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[LO,CE]{Chapter \thechapter}
+\fancyfoot[CO,RE]{Spencer Percy}
+
+\title{
+    {Two Photon Processes within the Hyperfine Structure of Hydrogen}\\
+    {\large University of Windsor}
+}    
+\author{Spencer Percy }
+\date{July 2018}
+%\doublespacing
+%\onehalfspacing
+\pgfplotsset{compat=1.15}
+
+%\sisetup{
+%  round-mode          = places, % Rounds numbers
+%  round-precision     = 3, % to 2 places
+%  scientific-notation = true
+%}
+
+\begin{document}
+\prepages
+
+\input{Chapters/Titlepage.tex}
+\input{Chapters/Approval.tex}
+
+\addtocounter{page}{2}
+
+%\begin{center}
+%    \begin{LARGE}
+%    \textbf{Author’s Declaration of Originality}
+%    \end{LARGE}
+%  \end{center}
+\chapter*{Author's Declaration of Originality}
+\addcontentsline{toc}{chapter}{Author’s Declaration of Originality}\input{Chapters/declaration.tex}
+
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}\input{Chapters/abstract.tex}
+
+
+\chapter*{Dedication}
+\addcontentsline{toc}{chapter}{Dedication}
+To Erica, I couldn't have done this without you.
+
+
+\chapter*{Acknowledgements}
+\addcontentsline{toc}{chapter}{Acknowledgements}\input{Chapters/Acknowledgements.tex}
+
+\tableofcontents
+
+\clearpage\addcontentsline{toc}{chapter}{List of Figures}\listoffigures
+\clearpage\addcontentsline{toc}{chapter}{List of Tables}\listoftables
+
+\mainbody
+\pagestyle{fancy}
+\chapter{Introduction}
+\input{Chapters/Introduction}
+\chapter{Hyperfine Splitting}
+\input{Chapters/Hyperfinesplit}
+
+%\chapter{Dipole Polarizability}
+
+%\input{Chapters/DipolePolarizability.tex}
+\chapter{Sturmian Basis Sets}
+\input{Chapters/SturmianBasisSets.tex}
+
+\chapter{Two Photon Processes}
+\input{Chapters/TwoPhotonProcesses}
+%\renewcommand{\familydefault}{\sfdefault}
+
+%\chapter{Wigner Eckhart Theorem}
+%\input{Chapters/WignerEckhartTheorm}
+
+
+%\chapter{Calculations}
+%\input{Chapters/Calculation.tex}
+
+\chapter{Conclusion}
+\input{Chapters/Conclusion}
+
+
+\begin{appendices}
+  \chapter{}
+  \input{Chapters/Appendices.tex}
+
+\end{appendices}
+
+%\input{Chapters/Appendices.tex}
+
+%\end{appendix}
+%\input{Chapters/Appendices.tex}
+%\chapter{}
+%\addcontentsline{toc}{chapter}{Appendix A}\input{Chapters/Appendices.tex}
+
+\clearpage 
+\pagestyle{plain}
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{apsrev4-1} % Either aipnum4-1 or apsrev4-1 should work
+\bibliography{references.bib}
+\addcontentsline{toc}{chapter}{Vita Auctoris}\include{authorpage}
+\end{document}
